@@ -21,7 +21,7 @@ class ItemValidationTest(FunctionalTest):
         inputbox.send_keys("Buy milk")
         inputbox.send_keys(Keys.ENTER)
 
-        self.wait_for_row_in_list_table('1. Buy milk')
+        self.wait_for_row_in_list_table('1: Buy milk')
         # Perversely, she now decides to submit a second blank list item
         # She receives a similar warning on the list page
         self.browser.find_element_by_id('id_new_item').send_keys(Keys.ENTER)
@@ -35,6 +35,6 @@ class ItemValidationTest(FunctionalTest):
         inputbox.send_keys("Buy tea")
         inputbox.send_keys(Keys.ENTER)
 
-        self.wait_for_row_in_list_table('1. Buy milk')
-        self.wait_for_row_in_list_table('2. Buy tea')
+        self.wait_for_row_in_list_table('1: Buy milk')
+        self.wait_for_row_in_list_table('2: Buy tea')
         self.fail('finish this test!')
