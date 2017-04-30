@@ -45,7 +45,7 @@ class NewVistorTest(FunctionalTest):
         # Satisfied, she goes back to sleep
 
 
-        def test_multiple_users_can_start_lists_at_different_urls(self):
+    def test_multiple_users_can_start_lists_at_different_urls(self):
         # Edith start a new todo list
         self.browser.get(self.server_url)
         inputbox = self.browser.find_element_by_id('id_new_item')
